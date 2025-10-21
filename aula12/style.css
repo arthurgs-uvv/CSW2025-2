@@ -1,0 +1,20 @@
+.azul{
+    color: blue;
+    text-align: center;
+}
+
+.impar{
+    color: red;
+    text-align: end;
+    content: "(Texto alinhado à direita)"
+}
+
+.par{
+    color: blueviolet;
+    font-style: italic;
+}
+
+.verde{
+    color: green;
+    font-weight: bold;
+}
