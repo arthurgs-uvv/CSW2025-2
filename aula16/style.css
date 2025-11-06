@@ -1,0 +1,21 @@
+input{
+    height: 25px;
+    border-radius: 10px;
+    width: 80px;
+}
+
+select{
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.div1{
+    background-color: darkblue;
+    width: 300px;
+    align-content: center;
+}
+
+body{
+    justify-content: center;
+}
