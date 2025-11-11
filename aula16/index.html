@@ -8,32 +8,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="div1">
-        <img src="./imagens/images.jpg" alt="Imagem do bebê">
-        <h1>Calculadora de Idade</h1>
-    </div>
-    <div>
-        <span>Data de Nascimento</span>
-        <input id="dia" class="data_nascimento" type="number" max="31" placeholder="Dia">
-        <select name="mes" class="mes_nascimento" id="mes">
-            <option value="01">Janeiro</option>
-            <option value="02">Fevereiro</option>
-            <option value="03">Março</option> 
-            <option value="04">Abril</option>
-            <option value="05">Maio</option>
-            <option value="06">Junho</option>
-            <option value="07">Julho</option>
-            <option value="08">Agosto</option>
-            <option value="09">Setembro</option>
-            <option value="10">Outubro</option>
-            <option value="11">Novembro</option>
-            <option value="12">Dezembro</option>
-        </select>
-        <input type="number" name="ano" id="ano" class="ano_nascimento" placeholder="Ano">
+    <div class="conteiner">
+        <div class="div1">
+                <img src="./imagens/images.jpg" alt="Imagem do bebê" class="imgbebe">
+                <h1 class="titulo">Calculadora de Idade</h1>
+        </div>
         <br>
-        <button onclick="calcula_idade()">Calcular idade</button>
+        <div class="div2">
+            <span>Data de Nascimento</span>
+            <input id="dia" class="data_nascimento" type="number" max="31" placeholder="Dia">
+            <select name="mes" class="mes_nascimento" id="mes">
+                <option value="01">Janeiro</option>
+                <option value="02">Fevereiro</option>
+                <option value="03">Março</option> 
+                <option value="04">Abril</option>
+                <option value="05">Maio</option>
+                <option value="06">Junho</option>
+                <option value="07">Julho</option>
+                <option value="08">Agosto</option>
+                <option value="09">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+            </select>
+            <input type="number" name="ano" id="ano" class="ano_nascimento" placeholder="Ano">
+            <br>
+            <button onclick="calcula_idade()">Calcular idade</button>
+        </div>
+        <br>
+        <div class="resposta" id="resposta">
+        </div>
     </div>
-
     <script>
         function calcula_idade() {
             var dia = document.getElementById('dia').value;
@@ -60,9 +65,7 @@
                 usuario_ano--;
             }
         
-
-            window.alert('Data de nascimento: '+ dia + '/' + mes + '/' + ano + '\n' + 'Você tem: ' + usuario_ano + ' anos' + '\n' + 'Data de hoje: ' + diahoje + '/' + meshoje + '/' + anohoje);
-            
+            document.getElementById('resposta').innerHTML = 'Data de nascimento: '+ dia + '/' + mes + '/' + ano + '<br>' + 'Você tem: ' + usuario_ano + ' anos' + '<br>' + 'Data de hoje: ' + diahoje + '/' + meshoje + '/' + anohoje;
         }
     </script>
 </body>

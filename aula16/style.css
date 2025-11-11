@@ -1,3 +1,28 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.conteiner{
+    width: auto;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.titulo{
+    position: absolute;
+    z-index: 1;
+}
+
+.imgbebe{
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
 input{
     height: 25px;
     border-radius: 10px;
@@ -11,11 +36,18 @@ select{
 }
 
 .div1{
-    background-color: darkblue;
-    width: 300px;
-    align-content: center;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    align-items:center;
+    display: flex;
+    justify-content: center;
 }
 
-body{
-    justify-content: center;
+.resposta{
+    color: black;
+    width: 100%;
+    height: 300px;
+    border: 2px solid;
+    border-color: black;
 }
