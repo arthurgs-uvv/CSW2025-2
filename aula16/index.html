@@ -10,12 +10,12 @@
 <body>
     <div class="conteiner">
         <div class="div1">
-                <img src="./imagens/images.jpg" alt="Imagem do bebê" class="imgbebe">
-                <h1 class="titulo">Calculadora de Idade</h1>
+            <img src="./imagens/images.jpg" alt="Imagem do bebê" class="imgbebe">
+            <h1 class="titulo">Calculadora de Idade</h1>
         </div>
         <br>
         <div class="div2">
-            <span>Data de Nascimento</span>
+            <span class="spandata">Data de Nascimento: </span>
             <input id="dia" class="data_nascimento" type="number" max="31" placeholder="Dia">
             <select name="mes" class="mes_nascimento" id="mes">
                 <option value="01">Janeiro</option>
@@ -32,41 +32,14 @@
                 <option value="12">Dezembro</option>
             </select>
             <input type="number" name="ano" id="ano" class="ano_nascimento" placeholder="Ano">
-            <br>
-            <button onclick="calcula_idade()">Calcular idade</button>
+            <br><br>
+            <button onclick="calcula_idade()" class="botaoidade">Calcular idade</button>
         </div>
         <br>
-        <div class="resposta" id="resposta">
+        <div class="respostadata" id="resposta">
         </div>
     </div>
-    <script>
-        function calcula_idade() {
-            var dia = document.getElementById('dia').value;
-            var mes = document.getElementById('mes').value;
-            var ano = document.getElementById('ano').value;
-            
-            datahoje = new Date ();
-
-            var diahoje = datahoje.getDate();
-            var meshoje = datahoje.getMonth() + 1;
-            var anohoje = datahoje.getFullYear();
-
-            if (dia <= 0 || dia > 31 || ano <= 0 ){
-                alert("Digite uma data de nascimento válida")
-                return
-            }
-
-            usuario_ano = anohoje - ano;
-
-            if (mes > meshoje){
-                usuario_ano--;
-            }
-            else if ((mes == meshoje) && (dia > diahoje)){
-                usuario_ano--;
-            }
-        
-            document.getElementById('resposta').innerHTML = 'Data de nascimento: '+ dia + '/' + mes + '/' + ano + '<br>' + 'Você tem: ' + usuario_ano + ' anos' + '<br>' + 'Data de hoje: ' + diahoje + '/' + meshoje + '/' + anohoje;
-        }
-    </script>
+    
+    <script src="./javascript.js"></script>
 </body>
 </html>
